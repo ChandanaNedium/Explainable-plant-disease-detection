@@ -1,6 +1,6 @@
 # Explainable Plant Disease Detection Using CNN
 
-A deep learning-based tomato leaf disease classification system built using PyTorch and the PlantVillage dataset. The project combines CNN-based classification with ANN comparison, Grad-CAM explainability, confidence estimation, image validation, and a Streamlit web interface.
+A deep learning-based tomato leaf disease classification system built using PyTorch and the PlantVillage dataset. The project combines CNN-based classification with ANN comparison, Grad-CAM explainability, confidence estimation, image suitability validation, and a Streamlit web interface.
 
 ---
 
@@ -133,7 +133,7 @@ A basic Artificial Neural Network (ANN) was implemented as a baseline.
 
 ### Observation
 
-The CNN performs better because convolutional layers preserve spatial relationships between nearby pixels and learn local image features such as textures, edges, and patterns.
+The CNN performs better because convolutional layers preserve spatial relationships between nearby pixels and learn local image features more effectively than a fully connected network that first flattens the image.
 
 The ANN flattens the image into a vector and therefore loses much of the spatial structure present in the original image.
 
@@ -171,7 +171,7 @@ The major source of error was confusion between:
 
 **Early Blight ↔ Late Blight**
 
-![Confusion Matrix](screenshots/confusion_matrix.png)
+![Confusion Matrix](confusion_matrix.png)
 
 ---
 
@@ -185,9 +185,9 @@ The heatmap provides a visual explanation of the model's decision:
 - 🟡 Yellow: moderate contribution
 - 🔵 Blue: lower contribution
 
-The GitHub example uses a held-out **PlantVillage test image** so that the visualization represents the model's intended dataset conditions.
+The example below is generated from a held-out **PlantVillage test image**.
 
-![Grad-CAM](screenshots/gradcam.png)
+![Grad-CAM](gradcam.png)
 
 > Grad-CAM shows regions influencing the model's prediction. It is not a precise disease-segmentation map and should not be interpreted as proof that the highlighted area is the exact disease lesion.
 
