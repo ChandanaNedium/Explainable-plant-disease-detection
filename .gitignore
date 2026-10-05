@@ -1,0 +1,28 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Google Colab / temporary files
+*.log
+
+# Dataset folders
+PlantVillage-Dataset/
+dataset/
+
+# Temporary model files
+*.tmp
+
+# Environment / secret files
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
